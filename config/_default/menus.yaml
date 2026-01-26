@@ -4,24 +4,95 @@
   #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Bio
-    url: /
-    weight: 10
-  - name: Papers
-    url: /#papers
-    weight: 11
-  - name: Talks
-    url: /#talks
-    weight: 12
-  - name: News
-    url: /#news
-    weight: 13
-  - name: Experience
-    url: experience/
+  # - name: 首页
+  #   url: /
+  #   weight: 10
+
+  - name: 中心概况
+    identifier: 中心概况
     weight: 20
-  - name: Projects
-    url: projects/
+  - name: 中心简介
+    parent: 中心概况
+    url: /#intro
+    weight: 10
+  - name: 大事记
+    parent: 中心概况
+    url: /#journey
+    weight: 20
+  - name: 合作伙伴
+    parent: 中心概况
+    url: /#partners
     weight: 30
-  - name: Courses
-    url: courses/
+  - name: 研究方向
+    parent: 中心概况
+    url: /#research-areas
     weight: 40
+
+  - name: 机构设置
+    identifier: 机构设置
+    weight: 30
+  - name: 组织框架
+    parent: 机构设置
+    url: /people/institution/
+    weight: 10
+  - name: 人员组成
+    parent: 机构设置
+    url: /people/
+    weight: 20
+
+
+  - name: 开放数据
+    identifier: 开放数据
+    weight: 40
+  - name: 开放数据中心
+    parent: 开放数据
+    url: /datasets/
+    weight: 10
+  - name: 物理海洋类
+    parent: 开放数据
+    url: /datasets/physical-oceanography/
+    weight: 10
+  - name: 海洋生态类
+    parent: 开放数据
+    url: /datasets/biochemical-oceanography/
+    weight: 20
+  - name: 海洋遥感类
+    parent: 开放数据
+    url: /datasets/remote-oceanography/
+    weight: 30
+
+  - name: 研究成果
+    identifier: 研究成果
+    weight: 50
+  - name: 最新成果
+    parent: 研究成果
+    url: /achievements/
+    weight: 10
+  - name: 承接项目列表
+    parent: 研究成果
+    url: /projects/
+    weight: 20
+  - name: 论文发表列表
+    parent: 研究成果
+    url: /publications/
+    weight: 30
+  - name: 专利申请列表
+    parent: 研究成果
+    url: /patents/
+    weight: 40
+
+
+  - name: 关于我们
+    identifier: 关于我们
+    weight: 60
+  - name: 新闻动态
+    parent: 关于我们
+    url: /news/
+    weight: 10
+  - name: 联系我们
+    parent: 关于我们
+    url: /contact/
+    weight: 20
+
+
+

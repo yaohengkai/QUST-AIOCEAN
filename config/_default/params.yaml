@@ -8,25 +8,26 @@ hugoblox:
     description: ""
   theme:
     mode: system
-    pack: contrast
+    pack: default
     colors:
       primary: ""
       secondary: ""
       neutral: ""
   typography:
-    font: sans
-    size: md
+    font: native
+    size: lg
   layout:
-    radius: md
-    spacing: comfortable
+    radius: lg
+    spacing: spacious
     avatar_shape: circle
   header:
     enable: true
     style: navbar
     sticky: true
-    align: left
+    align: center
     search: true
     theme_toggle: true
+    theme_picker: true
   footer:
     style: centered
     language_switcher: true
@@ -40,4 +41,6 @@ hugoblox:
     reading_time:
       enable: true
   search:
+    enable: true
+  debug:
     enable: true

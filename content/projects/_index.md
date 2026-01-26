@@ -11,8 +11,8 @@ design:
 sections:
   - block: collection
     content:
-      title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      title: 承接项目列表
+      text: 这是一个简单的介绍
       filters:
         folders:
           - projects

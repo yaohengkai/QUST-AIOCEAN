@@ -20,6 +20,7 @@ importers:
       preact:
         specifier: ^10.27.2
         version: 10.27.2
+    devDependencies:
       tailwindcss:
         specifier: ^4.1.12
         version: 4.1.12

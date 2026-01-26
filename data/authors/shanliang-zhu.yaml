@@ -1,0 +1,21 @@
+"schema": "hugoblox/author/v1"
+"slug": "shanliang-zhu"
+"name":
+  "display": "朱善良"
+  "given": "Shanliang"
+  "family": "Zhu"
+"role": "正教授"
+"affiliations":
+  - "name": "青岛科技大学"
+    "url": "https://www.qust.edu.cn/"
+"bio": "这里可以有一小段介绍，大概几行字，可以长一些，介绍作者的研究方向、兴趣爱好等。"
+"interests":
+  - "中尺度涡"
+  - "人工智能海洋学"
+  - "新材料"
+links:
+  - icon: envelope
+    icon_pack: fas
+    link: "mailto:zsl@qust.edu.cn" 
+user_groups:
+  - Leaders
