@@ -19,8 +19,27 @@ sections:
       text: |
         人工智能海洋技术场景化应用山东省工程研究中心以海洋科学理论和人工智能技术为基础，围绕国家、省市海洋发展战略和市场急需、行业关键的共性技术及“卡脖子”问题，遵循“基础理论研究->关键技术突破->智能算法设计->服务平台构建->典型场景应用”的研发路线，开展海洋人工智能与大数据挖掘技术的科学研究与示范应用。
 
-        <div style="width: 50vw; max-width: 100%; margin: 0 auto;">
-          <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115962238013944&bvid=BV1CCziBTEwU&cid=35631334796&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; aspect-ratio: 16 / 9; height: auto;"></iframe>
+        <style>
+        .bili-video {
+          width: 100%;
+          max-width: 100%;
+          margin: 0 auto;
+        }
+        .bili-video iframe {
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          height: auto;
+          display: block;
+        }
+        @media (min-width: 1024px) {
+          .bili-video {
+            width: 50vw;
+            max-width: 50vw;
+          }
+        }
+        </style>
+        <div class="bili-video">
+          <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115962238013944&bvid=BV1CCziBTEwU&cid=35631334796&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
         </div>
     design:
       columns: "1"
