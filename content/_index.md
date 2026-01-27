@@ -33,13 +33,21 @@ sections:
         }
         @media (min-width: 1024px) {
           .bili-video {
-            width: 50vw;
-            max-width: 50vw;
+            max-width: 65ch;
           }
         }
         </style>
         <div class="bili-video">
-          <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115962238013944&bvid=BV1CCziBTEwU&cid=35631334796&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+          <iframe
+            src="https://player.bilibili.com/player.html?bvid=BV1CCziBTEwU&cid=35631334796&page=1&high_quality=1&danmaku=0"
+            scrolling="no"
+            border="0"
+            frameborder="no"
+            framespacing="0"
+            allowfullscreen="true"
+            allow="fullscreen; encrypted-media"
+            referrerpolicy="no-referrer-when-downgrade"
+            loading="lazy"></iframe>
         </div>
     design:
       columns: "1"
