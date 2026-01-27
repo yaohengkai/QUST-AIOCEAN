@@ -44,3 +44,6 @@ hugoblox:
     enable: true
   debug:
     enable: true
+  locale:
+    date_format: 2006年1月2日
+    time_format: 15:04
