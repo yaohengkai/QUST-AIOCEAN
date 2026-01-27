@@ -5,7 +5,7 @@
   }
 
   .navbar-nav {
-    gap: calc(var(--spacing) * 10);
+    gap: calc(var(--spacing) * 12);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -16,4 +16,136 @@
   .navbar-nav > :not(:last-child) {
     margin-inline: 0;
   }
+}
+
+:root {
+  --brand-logo-width: 300px;
+  --brand-logo-height: 100px;
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--brand-logo-width);
+  height: var(--brand-logo-height);
+  margin-left: calc(var(--spacing) * 15);
+  background: url("/media/logos/%E7%99%BD%E5%A4%A9%20logo.png") no-repeat center / contain;
+  overflow: hidden;
+  text-indent: -9999px;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.dark .navbar-brand {
+  background-image: url("/media/logos/%E5%A4%9C%E9%97%B4%20logo.png");
+}
+
+@media (max-width: 1023.98px) {
+  :root {
+    --brand-logo-width: 240px;
+    --brand-logo-height: 50px;
+  }
+}
+
+#site-header.header {
+  padding-block: 0;
+}
+
+.navbar {
+  min-height: var(--brand-logo-height);
+  align-items: center;
+}
+
+.nav-link {
+  font-size: calc(var(--text-base) * 1.5);
+}
+
+.hero-carousel-wrapper {
+  margin: 0 calc(50% - 50vw);
+}
+
+/* Remove top gap above the hero carousel so it touches the navbar */
+#hero-carousel {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.hero-carousel {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 800ms ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+}
+
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+}
+
+.hero-slide-content {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 6vw;
+}
+
+.hero-slide-title {
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-slide-subtitle {
+  font-size: clamp(1rem, 1.6vw, 1.4rem);
+  opacity: 0.9;
+}
+
+.hero-carousel-indicators {
+  position: absolute;
+  left: 50%;
+  bottom: 2vh;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.hero-indicator {
+  width: 28px;
+  height: 4px;
+  border-radius: 999px;
+  border: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.hero-indicator.is-active {
+  background: rgba(255, 255, 255, 0.95);
+  transform: scaleX(1.15);
 }

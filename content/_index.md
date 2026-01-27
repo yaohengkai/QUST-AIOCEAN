@@ -10,6 +10,40 @@ design:
   # spacing: '6rem'
 
 sections:
+# --------------------------------------头图轮播--------------------------------------------
+  - block: markdown
+    id: hero-carousel
+    content:
+      text: |
+        <div class="hero-carousel-wrapper">
+          <div class="hero-carousel" data-carousel data-interval="3000">
+            <div class="hero-slide is-active" style="background-image: url('/uploads/hero-1.png');">
+              <div class="hero-slide-content">
+                <div>
+                  <div class="hero-slide-title">智能海洋 · 智汇未来</div>
+                  <div class="hero-slide-subtitle">人工智能海洋技术场景化应用</div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('/uploads/hero-2.png');">
+              <div class="hero-slide-content">
+                <div>
+                  <div class="hero-slide-title">海洋数据 · 科学发现</div>
+                  <div class="hero-slide-subtitle">从观测到决策的全链路创新</div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('/uploads/hero-3.png');">
+              <div class="hero-slide-content">
+                <div>
+                  <div class="hero-slide-title">技术突破 · 应用落地</div>
+                  <div class="hero-slide-subtitle">服务海洋产业与城市发展</div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-carousel-indicators" aria-hidden="true"></div>
+          </div>
+        </div>
 # --------------------------------------中心简介--------------------------------------------
   - block: markdown
     id: intro
