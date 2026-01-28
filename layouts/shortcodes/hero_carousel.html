@@ -1,0 +1,52 @@
+{{- $images := slice -}}
+{{- $titles := slice -}}
+{{- $subtitles := slice -}}
+{{- $interval := "3000" -}}
+
+{{- if .Inner -}}
+  {{- $data := transform.Unmarshal .Inner -}}
+  {{- if $data.images -}}{{- $images = $data.images -}}{{- end -}}
+  {{- if $data.titles -}}{{- $titles = $data.titles -}}{{- end -}}
+  {{- if $data.subtitles -}}{{- $subtitles = $data.subtitles -}}{{- end -}}
+  {{- if $data.interval -}}{{- $interval = printf "%v" $data.interval -}}{{- end -}}
+{{- end -}}
+
+{{- if not (len $images) -}}
+  {{- $images = slice "media/hero/hero-1.png" "media/hero/hero-2.png" "media/hero/hero-3.png" -}}
+{{- end -}}
+{{- if not (len $titles) -}}
+  {{- $titles = slice "智能海洋 · 智汇未来" "海洋数据 · 科学发现" "技术突破 · 应用落地" -}}
+{{- end -}}
+{{- if not (len $subtitles) -}}
+  {{- $subtitles = slice "人工智能海洋技术场景化应用" "从观测到决策的全链路创新" "服务海洋产业与城市发展" -}}
+{{- end -}}
+
+<div class="hero-carousel-wrapper">
+  <div class="hero-carousel" data-carousel data-interval="{{ $interval }}">
+    {{- range $i, $img := $images -}}
+      {{- $img = trim $img " " -}}
+      {{- $title := "" -}}
+      {{- $subtitle := "" -}}
+      {{- if lt $i (len $titles) -}}
+        {{- $title = trim (index $titles $i) " " -}}
+      {{- end -}}
+      {{- if lt $i (len $subtitles) -}}
+        {{- $subtitle = trim (index $subtitles $i) " " -}}
+      {{- end -}}
+      {{- $res := resources.Get $img -}}
+      {{- $url := "" -}}
+      {{- if $res -}}
+        {{- $url = $res.RelPermalink -}}
+      {{- end -}}
+      <div class="hero-slide{{ if eq $i 0 }} is-active{{ end }}" style="background-image: url('{{ $url }}');">
+        <div class="hero-slide-content">
+          <div>
+            <div class="hero-slide-title">{{ $title }}</div>
+            <div class="hero-slide-subtitle">{{ $subtitle }}</div>
+          </div>
+        </div>
+      </div>
+    {{- end -}}
+    <div class="hero-carousel-indicators" aria-hidden="true"></div>
+  </div>
+</div>

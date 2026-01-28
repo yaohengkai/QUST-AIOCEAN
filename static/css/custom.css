@@ -56,7 +56,7 @@
   width: var(--brand-logo-width);
   height: var(--brand-logo-height);
   margin-left: var(--brand-logo-left);
-  background: url("/media/logos/%E7%99%BD%E5%A4%A9%20logo.png") no-repeat center / contain;
+  background: url("/media/logos/site-logo-day.png") no-repeat center / contain;
   overflow: hidden;
   text-indent: -9999px;
   white-space: nowrap;
@@ -64,7 +64,7 @@
 }
 
 .dark .navbar-brand {
-  background-image: url("/media/logos/%E5%A4%9C%E9%97%B4%20logo.png");
+  background-image: url("/media/logos/site-logo-night.png");
 }
 
 @media (max-width: 1023.98px) {
