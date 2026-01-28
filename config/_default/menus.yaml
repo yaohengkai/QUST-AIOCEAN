@@ -4,46 +4,84 @@
   #   The weight parameter defines the order that the links will appear in.
 
 main:
-  # - name: 首页
-  #   url: /
-  #   weight: 10
+  - name: 首页
+    url: /
+    weight: 10
 
-  - name: 中心概况
-    identifier: 中心概况
+  - name: 关于我们
+    identifier: 关于我们
     weight: 20
   - name: 中心简介
-    parent: 中心概况
+    parent: 关于我们
     url: /#intro
     weight: 10
-  - name: 大事记
-    parent: 中心概况
-    url: /#journey
+  - name: 组织框架
+    parent: 关于我们
+    url: /people/institution/
     weight: 20
-  - name: 合作伙伴
-    parent: 中心概况
-    url: /#partners
+  - name: 大事记
+    parent: 关于我们
+    url: /#journey
     weight: 30
+  - name: 合作伙伴
+    parent: 关于我们
+    url: /#partners
+    weight: 40
   - name: 研究方向
-    parent: 中心概况
+    parent: 关于我们
     url: /#research-areas
+    weight: 50
+  - name: 联系我们
+    parent: 关于我们
+    url: /contact/
+    weight: 60
+
+
+  - name: 新闻动态
+    identifier: 新闻动态
+    weight: 30
+  - name: 科研动态
+    parent: 新闻动态
+    url: /achievements/
+    weight: 10
+  - name: 学术活动
+    parent: 新闻动态
+    url: /event/
+    weight: 20
+  - name: 中心新闻
+    parent: 新闻动态
+    url: /news/
+    weight: 30
+  - name: 通知公告
+    parent: 新闻动态
+    url: /news/
     weight: 40
 
-  - name: 机构设置
-    identifier: 机构设置
-    weight: 30
-  - name: 组织框架
-    parent: 机构设置
-    url: /people/institution/
+
+  - name: 人才队伍
+    identifier: 人才队伍
+    weight: 40
+  - name: 学术带头人
+    parent: 人才队伍
+    url: /people/
     weight: 10
-  - name: 人员组成
-    parent: 机构设置
+  - name: 研究团队
+    parent: 人才队伍
     url: /people/
     weight: 20
+  - name: 研究人员
+    parent: 人才队伍
+    url: /people/
+    weight: 30
+  - name: 荣誉
+    parent: 人才队伍
+    url: /
+    weight: 40
 
 
   - name: 开放数据
     identifier: 开放数据
-    weight: 40
+    weight: 50
   - name: 开放数据中心
     parent: 开放数据
     url: /datasets/
@@ -51,48 +89,51 @@ main:
   - name: 物理海洋类
     parent: 开放数据
     url: /datasets/physical-oceanography/
-    weight: 10
+    weight: 20
   - name: 海洋生态类
     parent: 开放数据
     url: /datasets/biochemical-oceanography/
-    weight: 20
+    weight: 30
   - name: 海洋遥感类
     parent: 开放数据
     url: /datasets/remote-oceanography/
-    weight: 30
+    weight: 40
 
   - name: 研究成果
     identifier: 研究成果
-    weight: 50
-  - name: 最新成果
-    parent: 研究成果
-    url: /achievements/
-    weight: 10
+    weight: 60
   - name: 承接项目列表
     parent: 研究成果
     url: /projects/
-    weight: 20
+    weight: 10
   - name: 论文发表列表
     parent: 研究成果
     url: /publications/
-    weight: 30
+    weight: 20
   - name: 专利申请列表
     parent: 研究成果
     url: /patents/
+    weight: 30
+  - name: 获奖列表
+    parent: 研究成果
+    url: /
     weight: 40
 
-
-  - name: 关于我们
-    identifier: 关于我们
-    weight: 60
-  - name: 新闻动态
-    parent: 关于我们
-    url: /news/
+  - name: 社会服务
+    identifier: 社会服务
+    weight: 70
+  - name: 产品技术
+    parent: 社会服务
+    url: /projects/
     weight: 10
-  - name: 联系我们
-    parent: 关于我们
-    url: /contact/
+  - name: 成果转化
+    parent: 社会服务
+    url: /publications/
     weight: 20
+  - name: 应用案例
+    parent: 社会服务
+    url: /patents/
+    weight: 30
 
 
 
