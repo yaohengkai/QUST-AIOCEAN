@@ -1,2 +1,10 @@
 <link rel="stylesheet" href="/css/custom.css">
+{{ $logoLight := resources.Get "media/logos/site-logo-day.png" }}
+{{ $logoDark := resources.Get "media/logos/site-logo-night.png" }}
+<style>
+  :root {
+    --site-logo-light: url("{{ with $logoLight }}{{ .RelPermalink }}{{ end }}");
+    --site-logo-dark: url("{{ with $logoDark }}{{ .RelPermalink }}{{ end }}");
+  }
+</style>
 <script src="/js/custom.js" defer></script>
