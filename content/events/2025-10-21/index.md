@@ -20,7 +20,7 @@ abstract: |
 
 # Talk start and end times.
 event_start: '2025-10-23T9:30:00Z'
-event_end: '2026-01-23T12:00:00Z'
+event_end: '2025-10-23T12:00:00Z'
 event_all_day: false
 
 authors:

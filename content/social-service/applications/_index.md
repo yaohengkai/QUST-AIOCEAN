@@ -42,7 +42,7 @@ sections:
 
     design:                                          #【可选】展示样式
       view: "article-grid"                                   #【可选】card/date-title-summary/citation/article-grid；不存在则回退 card
-      columns: 2                                     #【可选】正整数；列数；默认 2
+      columns: 3                                     #【可选】正整数；列数；默认 2
       fill_image: true                               #【可选】true/false；图片是否铺满
       show_date: false                                #【可选】true/false；显示日期
       show_read_time: false                           #【可选】true/false；显示阅读时长

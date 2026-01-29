@@ -1,0 +1,7 @@
+{{/* Left alignment / width is set so that multiple blocks with this view & variable length content all left align. */}}
+{{ $max_w := "max-w-3xl" }}
+{{ if reflect.IsMap .page }}
+  {{ $max_w = "max-w-[90%]" }}
+{{ end }}
+<div class="mt-16 sm:mt-20 container {{ $max_w }} w-full">
+  <div class="flex flex-col space-y-3">

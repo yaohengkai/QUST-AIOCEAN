@@ -1,0 +1,5 @@
+{{ $max_w := "max-w-[65ch]" }}
+{{ if reflect.IsMap .page }}
+  {{ $max_w = "max-w-[90%]" }}
+{{ end }}
+<div class="container {{ $max_w }} mx-auto grid grid-cols-1 gap-6 my-5">
