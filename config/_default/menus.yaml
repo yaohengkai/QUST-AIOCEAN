@@ -46,7 +46,7 @@ main:
     weight: 10
   - name: 学术活动
     parent: 新闻动态
-    url: /event/
+    url: /events/
     weight: 20
   - name: 中心新闻
     parent: 新闻动态
@@ -54,7 +54,7 @@ main:
     weight: 30
   - name: 通知公告
     parent: 新闻动态
-    url: /news/
+    url: /announcements/
     weight: 40
 
 
@@ -124,7 +124,7 @@ main:
     weight: 70
   - name: 产品技术
     parent: 社会服务
-    url: /projects/
+    url: /social-service/product-technology/
     weight: 10
   - name: 成果转化
     parent: 社会服务
@@ -132,7 +132,7 @@ main:
     weight: 20
   - name: 应用案例
     parent: 社会服务
-    url: /patents/
+    url: /social-service/applications/
     weight: 30
 
 

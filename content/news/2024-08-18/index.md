@@ -3,7 +3,7 @@ title: 学院获批山东省工程研究中心
 summary: 
 date: 2024-08-18
 authors:
-  - 刘敏
+  - Min Liu
 tags:
   - news
 image:

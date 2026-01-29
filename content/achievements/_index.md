@@ -8,7 +8,7 @@ sections:
   - block: collection                               #【必选】固定值 collection（模块类型）
     content:                                         #【可选】内容配置
       title: "最新成果"                                   #【可选】任意字符串；支持 Markdown/emoji；为空不显示标题
-      text: "集合出版的文章、承接的项目、申报的专利、获得的奖励"                                #【可选】任意字符串；支持 Markdown/emoji；为空可省略
+      # text: "集合出版的文章、承接的项目、申报的专利、获得的奖励"                                #【可选】任意字符串；支持 Markdown/emoji；为空可省略
       offset: 0                                      #【可选】>=0 整数；跳过前 N 条；默认 0
       count: 20                                       #【可选】整数；0=近似无限(内部65535)；未填默认 5
       sort_by: "Date"                                #【可选】内置字段(大写：Date/Title/Lastmod/PublishDate/Weight...)或自定义(小写自动转 Params.xxx)
