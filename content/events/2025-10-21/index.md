@@ -27,10 +27,7 @@ authors:
   - admin
 
 tags:
-  - Markdown
-  - Presentations
-  - Open Science
-  - Academic
+  - Event
 
 featured: true
 
