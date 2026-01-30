@@ -13,7 +13,7 @@ main:
     weight: 20
   - name: 中心简介
     parent: 关于我们
-    url: /#intro
+    url: /about-us/#intro
     weight: 10
   - name: 组织框架
     parent: 关于我们
@@ -21,19 +21,19 @@ main:
     weight: 20
   - name: 大事记
     parent: 关于我们
-    url: /#journey
+    url: /about-us/#journey
     weight: 30
   - name: 合作伙伴
     parent: 关于我们
-    url: /#partners
+    url: /about-us/#partners
     weight: 40
   - name: 研究方向
     parent: 关于我们
-    url: /#research-areas
+    url: /about-us/#research-areas
     weight: 50
   - name: 联系我们
     parent: 关于我们
-    url: /contact/
+    url: /about-us/#contact
     weight: 60
 
 
@@ -42,19 +42,19 @@ main:
     weight: 30
   - name: 科研动态
     parent: 新闻动态
-    url: /achievements/
+    url: /news-activity/achievements/
     weight: 10
   - name: 学术活动
     parent: 新闻动态
-    url: /events/
+    url: /news-activity/events/
     weight: 20
   - name: 中心新闻
     parent: 新闻动态
-    url: /news/
+    url: /news-activity/news/
     weight: 30
   - name: 通知公告
     parent: 新闻动态
-    url: /announcements/
+    url: /news-activity/announcements/
     weight: 40
 
 

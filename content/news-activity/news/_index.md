@@ -3,6 +3,10 @@ title: ''
 date: 2024-05-19
 type: landing
 
+# 让本目录下的内容统一使用自定义 Type，方便 collection 精准过滤
+cascade:
+  type: news
+
 # Page sections
 sections:
   - block: collection                               #【必选】固定值 collection（模块类型）
@@ -10,16 +14,15 @@ sections:
       title: "新闻动态"                                   #【可选】任意字符串；支持 Markdown/emoji；为空不显示标题
       # text: "News"                                #【可选】任意字符串；支持 Markdown/emoji；为空可省略
       offset: 0                                      #【可选】>=0 整数；跳过前 N 条；默认 0
-      count: 5                                       #【可选】整数；0=近似无限(内部65535)；未填默认 5
+      count: 0                                       #【可选】整数；0=近似无限(内部65535)；未填默认 5
       sort_by: "Date"                                #【可选】内置字段(大写：Date/Title/Lastmod/PublishDate/Weight...)或自定义(小写自动转 Params.xxx)
       sort_ascending: false                          #【可选】true/false；升序；默认 false
       # order: asc                                   #【可选】asc/desc；asc 等效 sort_ascending=true
 
-    #   page_type: "publications"                       #【可选】Type 过滤；任意 Section/Type 名(如 blog/publication/event)
-
       filters:                                       #【可选】过滤器集合
         # kinds: ["page"]                              #【可选】Kind 列表：page/home/section/taxonomy/term...；默认 ["page"]
-        folders: [news]                    #【可选】Section 列表；任意文件夹名数组
+        folders: [news-activity]           #【可选】Section 列表；任意文件夹名数组
+        tag: "news"                        #【可选】单 tag；任意标签名；与 tags 互斥更清晰
         # tags: ["AI","NLP"]                           #【可选】多 tag 交集；任意标签数组；有效时归档页指向第一个 tag
         # tag: "AI"                                  #【可选】单 tag；任意标签名；与 tags 互斥更清晰
         # category: "ML"                             #【可选】单 category；任意分类名

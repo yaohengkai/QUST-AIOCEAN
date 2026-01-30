@@ -27,7 +27,7 @@ authors:
   - admin
 
 tags:
-  - Event
+  - event
 
 featured: true
 
