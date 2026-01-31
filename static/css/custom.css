@@ -246,6 +246,85 @@
   opacity: 1 !important;
 }
 
+/* Publication pages: widen text content */
+.page-publications {
+  --publication-text-width: 60vw;
+}
+
+.page-publications .max-w-screen-xl {
+  max-width: 100%;
+}
+
+.page-publications article > main {
+  width: var(--publication-text-width);
+  max-width: var(--publication-text-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-publications main > h1,
+.page-publications main > .max-w-prose.grid {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.page-publications .max-w-prose.grid > div:first-child + div {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.page-publications .prose {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.page-publications .prose p {
+  margin: 0;
+}
+
+.page-publications .prose p + p {
+  margin-top: 0.75rem;
+}
+
+.page-publications .max-w-prose.grid > div:first-child + div p {
+  margin: 0;
+}
+
+.page-publications .max-w-prose.grid > div:first-child + div p + p {
+  margin-top: 0.75rem;
+}
+
+.page-publications .prose,
+.page-publications .max-w-prose,
+.page-publications .container.mx-auto.prose,
+.page-publications time {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .page-publications article > main,
+  .page-publications .prose,
+  .page-publications .max-w-prose,
+  .page-publications .container.mx-auto.prose,
+  .page-publications time {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page-publications main > h1,
+  .page-publications main > .max-w-prose.grid {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .hero-carousel-indicators {
   position: absolute;
   left: 50%;

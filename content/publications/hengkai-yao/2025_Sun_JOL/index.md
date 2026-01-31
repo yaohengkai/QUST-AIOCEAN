@@ -81,7 +81,7 @@ image:
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
 projects:
-  - 2024_AI_Ocean
+  - pandas
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.

@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const pageSection = window.__HBX_LOGS__?.currentPage?.section || window.__HBX_LOGS__?.currentPage?.type;
+  const isPublicationsPath = window.location.pathname.startsWith("/publications/");
+  if (pageSection === "publications" || isPublicationsPath) {
+    document.body.classList.add("page-publications");
+  }
+
   document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     const slides = Array.from(carousel.querySelectorAll(".hero-slide"));
     if (slides.length < 2) return;
