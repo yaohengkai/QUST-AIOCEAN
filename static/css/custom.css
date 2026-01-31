@@ -296,6 +296,11 @@
   margin-top: 0.75rem;
 }
 
+/* Publications list page title alignment */
+.page-publications .page-body .prose h1 {
+  text-align: center;
+}
+
 .page-publications .prose,
 .page-publications .max-w-prose,
 .page-publications .container.mx-auto.prose,
