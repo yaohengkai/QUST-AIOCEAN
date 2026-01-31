@@ -153,6 +153,15 @@
   background: #000;
 }
 
+/* Reduce gap between hero carousel and next section on home */
+.page-home #hero-carousel {
+  padding-bottom: 0;
+}
+
+.page-home #hero-carousel + .hbb-section {
+  padding-top: 5;
+}
+
 .hero-slide {
   position: absolute;
   inset: 0;
