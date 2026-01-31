@@ -17,7 +17,7 @@ main:
     weight: 10
   - name: 组织框架
     parent: 关于我们
-    url: /people/institution/
+    url: /about-us/#structure
     weight: 20
   - name: 大事记
     parent: 关于我们

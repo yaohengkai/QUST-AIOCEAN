@@ -195,6 +195,57 @@
   opacity: 0.9;
 }
 
+/* Make Mermaid diagrams wider than the prose column */
+.prose .mermaid {
+  width: 70vw;
+  max-width: 70vw;
+  margin-left: calc(50% - 35vw);
+  margin-right: calc(50% - 35vw);
+}
+
+.prose .mermaid svg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .prose .mermaid {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Widen the intro block text and Bilibili embed */
+#intro .prose {
+  width: 70vw;
+  max-width: 70vw;
+}
+
+#intro .bili-video {
+  width: 70vw;
+  max-width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  #intro .prose,
+  #intro .bili-video {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Partner logos: larger size and keep original colors */
+#partners img {
+  height: clamp(5.5rem, 9vw, 7.5rem);
+  width: auto;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
 .hero-carousel-indicators {
   position: absolute;
   left: 50%;
