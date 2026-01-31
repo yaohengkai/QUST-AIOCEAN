@@ -69,6 +69,9 @@ sections:
       show_date: true                                #【可选】true/false；显示日期
       show_read_time: false                           #【可选】true/false；显示阅读时长
       show_read_more: false                           #【可选】true/false；显示 Read more
+
+      # Apply a gradient background
+      css_class: hbx-bg-gradient
 # --------------------------------------学术活动--------------------------------------------
   - block: collection                               #【必选】固定值 collection（模块类型）
     content:                                         #【可选】内容配置
@@ -108,6 +111,8 @@ sections:
       show_date: true                                #【可选】true/false；显示日期
       show_read_time: false                           #【可选】true/false；显示阅读时长
       show_read_more: false                           #【可选】true/false；显示 Read more
+
+      
 # --------------------------------------新闻动态--------------------------------------------
   - block: collection                               #【必选】固定值 collection（模块类型）
     content:                                         #【可选】内容配置
@@ -147,6 +152,15 @@ sections:
       show_read_time: false                           #【可选】true/false；显示阅读时长
       show_read_more: false                           #【可选】true/false；显示 Read more
 
+      background:
+        gradient_mesh:
+          enable: true
+          style: "waves" # orbs, waves, dots, grid
+          animation: "pulse" # pulse, float, rotate, none
+          intensity: "subtle" # subtle, medium, bold
+          colors:
+            - "primary-500/20"
+            - "primary-600/20"
 # --------------------------------------最新论文发表--------------------------------------------
   - block: portfolio
     id: recent-papers

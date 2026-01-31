@@ -195,6 +195,25 @@
   opacity: 0.9;
 }
 
+.hero-slide-title,
+.hero-slide-subtitle {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 500ms ease, transform 700ms ease;
+}
+
+.hero-slide.is-active .hero-slide-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 120ms;
+}
+
+.hero-slide.is-active .hero-slide-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 220ms;
+}
+
 /* Make Mermaid diagrams wider than the prose column */
 .prose .mermaid {
   width: 70vw;
@@ -341,6 +360,32 @@
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(6px);
+}
+
+/* Home page section reveal */
+.page-home .hbb-section.reveal,
+.page-about-us .hbb-section.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms ease, transform 700ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.page-home .hbb-section.reveal.is-visible,
+.page-about-us .hbb-section.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-home .hbb-section.reveal,
+  .page-about-us .hbb-section.reveal,
+  .hero-slide-title,
+  .hero-slide-subtitle {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .hero-indicator {

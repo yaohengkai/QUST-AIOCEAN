@@ -1,8 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const isHome = window.location.pathname === "/" || window.location.pathname === "/index.html";
+  const isAbout = window.location.pathname.startsWith("/about-us/");
+  if (isHome) {
+    document.body.classList.add("page-home");
+  }
+  if (isAbout) {
+    document.body.classList.add("page-about-us");
+  }
+
   const pageSection = window.__HBX_LOGS__?.currentPage?.section || window.__HBX_LOGS__?.currentPage?.type;
   const isPublicationsPath = window.location.pathname.startsWith("/publications/");
   if (pageSection === "publications" || isPublicationsPath) {
     document.body.classList.add("page-publications");
+  }
+
+  if (isHome || isAbout) {
+    const sections = Array.from(document.querySelectorAll(".hbb-section"));
+    const sectionsToReveal = isHome
+      ? sections.filter((section) => section.id !== "hero-carousel")
+      : sections;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    sectionsToReveal.forEach((section, index) => {
+      section.classList.add("reveal");
+      const delay = Math.min(index, 6) * 80;
+      section.style.setProperty("--reveal-delay", `${delay}ms`);
+    });
+
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      sectionsToReveal.forEach((section) => section.classList.add("is-visible"));
+    } else {
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
+      );
+      sectionsToReveal.forEach((section) => observer.observe(section));
+    }
   }
 
   document.querySelectorAll("[data-carousel]").forEach((carousel) => {
